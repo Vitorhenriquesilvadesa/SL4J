@@ -327,7 +327,7 @@ public abstract class Logger {
      * @param writer    the PrintWriter object to write the log details
      */
     private void generateCriticalBaseFile(RuntimeException exception, String message, PrintWriter writer) {
-        writer.println("Critical Error:");
+        writer.println("Critical Error: ");
         writer.println("Timestamp: " + getFormattedTimestamp());
         writer.println("Message: " + message);
         writer.println("Stack Trace:");
