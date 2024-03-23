@@ -228,6 +228,18 @@ public abstract class Logger {
 
 
     /**
+     * Logs a critical error message and exits the program.
+     *
+     * @param target   the target object to log
+     * @param exitCode the exit code of critical call
+     */
+    protected final void critical(Object target, int exitCode) {
+        printMessage(LogLevel.CRITICAL, target.toString(), LogColor.COLOR_CRITICAL);
+        System.exit(exitCode);
+    }
+
+
+    /**
      * Logs an error message with an associated exception.
      *
      * @param target    the target object to log
@@ -250,6 +262,22 @@ public abstract class Logger {
 
         if (this.generateCriticalFile && generateCriticalFiles) {
             generateCriticalFile(exception, target.toString());
+        }
+        throwException(exception);
+    }
+
+
+    /**
+     * Logs a critical error message with an associated runtime exception.
+     *
+     * @param target    the target object to log
+     * @param exception the RuntimeException object
+     */
+    protected final void critical(Object target, RuntimeException exception, int code) {
+        printMessage(LogLevel.CRITICAL, target.toString(), LogColor.COLOR_CRITICAL);
+
+        if (this.generateCriticalFile && generateCriticalFiles) {
+            generateCriticalFile(exception, target.toString(), code);
         }
         throwException(exception);
     }
@@ -290,6 +318,30 @@ public abstract class Logger {
 
     /**
      * Generates a critical log file for the given exception and message.
+     * This method writes the critical error details to the provided PrintWriter.
+     * The log includes information such as the timestamp, message, stack trace of the exception,
+     * and additional details including the exception type, message, cause, and source.
+     *
+     * @param exception the RuntimeException object representing the exception
+     * @param message   the log message associated with the critical error
+     * @param writer    the PrintWriter object to write the log details
+     */
+    private void generateCriticalBaseFile(RuntimeException exception, String message, PrintWriter writer) {
+        writer.println("Critical Error:");
+        writer.println("Timestamp: " + getFormattedTimestamp());
+        writer.println("Message: " + message);
+        writer.println("Stack Trace:");
+        exception.printStackTrace(writer);
+        writer.println("\nAdditional Details:");
+        writer.println("Exception Type: " + exception.getClass().getName());
+        writer.println("Exception Message: " + exception.getMessage());
+        writer.println("Exception Cause: " + (exception.getCause() != null ? exception.getCause().toString() : "N/A"));
+        writer.println("Exception Source: " + getExceptionSource(exception));
+    }
+
+
+    /**
+     * Generates a critical log file for the given exception and message.
      * If the GenerateCriticalFile annotation is present and critical file generation is enabled,
      * this method creates a log file with details of the exception and the associated message.
      * The log file is named with the current timestamp in the format "yyyy-MM-dd_HH-mm-ss.log".
@@ -302,16 +354,31 @@ public abstract class Logger {
     private void generateCriticalFile(RuntimeException exception, String message) {
         if (generateCriticalFile) {
             try (PrintWriter writer = new PrintWriter(new FileWriter(getFormattedTimestamp().replaceAll(" ", "_").replaceAll(":", "-") + ".log"))) {
-                writer.println("Critical Error:");
-                writer.println("Timestamp: " + getFormattedTimestamp());
-                writer.println("Message: " + message);
-                writer.println("Stack Trace:");
-                exception.printStackTrace(writer);
-                writer.println("\nAdditional Details:");
-                writer.println("Exception Type: " + exception.getClass().getName());
-                writer.println("Exception Message: " + exception.getMessage());
-                writer.println("Exception Cause: " + (exception.getCause() != null ? exception.getCause().toString() : "N/A"));
-                writer.println("Exception Source: " + getExceptionSource(exception));
+                generateCriticalBaseFile(exception, message, writer);
+            } catch (IOException e) {
+                error(message, e);
+            }
+        }
+    }
+
+
+    /**
+     * Generates a critical log file for the given exception and message.
+     * If the GenerateCriticalFile annotation is present and critical file generation is enabled,
+     * this method creates a log file with details of the exception and the associated message.
+     * The log file is named with the current timestamp in the format "yyyy-MM-dd_HH-mm-ss.log".
+     * It contains information such as the timestamp, message, stack trace of the exception,
+     * and additional details including the exception type, message, cause, and source.
+     *
+     * @param exception the RuntimeException object representing the exception
+     * @param message   the log message associated with the critical error
+     * @param code      the application exit code
+     */
+    private void generateCriticalFile(RuntimeException exception, String message, int code) {
+        if (generateCriticalFile) {
+            try (PrintWriter writer = new PrintWriter(new FileWriter(getFormattedTimestamp().replaceAll(" ", "_").replaceAll(":", "-") + ".log"))) {
+                generateCriticalBaseFile(exception, message, writer);
+                writer.println("Application Exit Code: " + code);
             } catch (IOException e) {
                 error(message, e);
             }
