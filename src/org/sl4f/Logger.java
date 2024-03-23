@@ -32,9 +32,9 @@ import java.util.Date;
  * - NotDebugLog: for excluding classes from debug logging
  * - GenerateCriticalFile: for indicating whether critical errors should generate log files
  *
- * @author [Vitor Henrique]
- * @version [1.0.0]
- * @since [1.0.0]
+ * @author Vitor Henrique
+ * @version 1.0.0
+ * @since 1.0.0
  */
 public abstract class Logger {
 
@@ -52,6 +52,7 @@ public abstract class Logger {
      * Indicates whether file tracking is enabled.
      */
     public static boolean enableFileTracking = false;
+
     private final String name;
     private final DateFormat dateFormat;
     private LogLevel logLevel;
