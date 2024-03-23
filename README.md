@@ -22,7 +22,8 @@ customizable log formatting, and optional file logging for critical errors.
 
 ## Installation
 
-You can include SL4F in your Java project using JAR file:
+You can include SL4F in your Java project
+using [JAR](https://github.com/Vitorhenriquesilvadesa/SL4J/releases/tag/Release) file:
 
 
 ## Usage
