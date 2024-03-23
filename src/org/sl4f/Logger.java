@@ -171,7 +171,7 @@ public abstract class Logger {
 
 
     /**
-     * Logs an informational message.
+     * Logs an information message.
      *
      * @param target the target object to log
      */
