@@ -322,7 +322,7 @@ public class Logger {
      * Generates a critical log file for the given exception and message.
      * This method writes the critical error details to the provided PrintWriter.
      * The log includes information such as the timestamp, message, stack trace of the exception,
-     * and additional details including the exception type, message, cause, and source.
+     * and additional details including the exception type, message, cause, and source, formatted.
      *
      * @param exception the RuntimeException object representing the exception
      * @param message   the log message associated with the critical error
