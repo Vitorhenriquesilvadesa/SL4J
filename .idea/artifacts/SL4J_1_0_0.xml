@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SL4J-1.0.0">
+    <output-path>$PROJECT_DIR$/out/artifacts/SL4J_1_0_0</output-path>
+    <root id="archive" name="SL4J-1.0.0.jar">
+      <element id="module-output" name="SL4J" />
+    </root>
+  </artifact>
+</component>

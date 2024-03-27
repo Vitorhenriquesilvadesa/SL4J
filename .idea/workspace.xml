@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="SL4J-1.0.0" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4410eded-fb29-4fbd-9954-2fcb5fcc44f3" name="Changes" comment="📚 Adding README file to guide user to use SL4J.">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SL4J_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2024-03-27_13-06-16.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2024-03-27_13-08-27.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2024-03-27_13-08-45.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SL4J.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MeuLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/sl4f/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/sl4f/Logger.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2e6ecWw4srwl8rMVTCRRpdU6ojd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-78a6f59c" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4410eded-fb29-4fbd-9954-2fcb5fcc44f3" name="Changes" comment="" />
+      <created>1711229536242</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711229536242</updated>
+      <workItem from="1711229537275" duration="4179000" />
+      <workItem from="1711555471030" duration="313000" />
+    </task>
+    <task id="LOCAL-00001" summary="🎉 Starting Simple Log for Java.">
+      <option name="closed" value="true" />
+      <created>1711230597581</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711230597581</updated>
+    </task>
+    <task id="LOCAL-00002" summary="⚡ Creating annotation classes for customize Logger.">
+      <option name="closed" value="true" />
+      <created>1711230666775</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711230666775</updated>
+    </task>
+    <task id="LOCAL-00003" summary="⚡ Creating color constants and Log Level enum.">
+      <option name="closed" value="true" />
+      <created>1711230728209</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711230728209</updated>
+    </task>
+    <task id="LOCAL-00004" summary="⚡ Implementing first version of Logger.">
+      <option name="closed" value="true" />
+      <created>1711230747240</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711230747240</updated>
+    </task>
+    <task id="LOCAL-00005" summary="⚡ Implementing first version of Logger.">
+      <option name="closed" value="true" />
+      <created>1711231289933</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711231289933</updated>
+    </task>
+    <task id="LOCAL-00006" summary="📚 Adding the README file for guide user to use SL4J.">
+      <option name="closed" value="true" />
+      <created>1711231344478</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711231344478</updated>
+    </task>
+    <task id="LOCAL-00007" summary="⚡ Implementing first version of Logger.">
+      <option name="closed" value="true" />
+      <created>1711231774184</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711231774184</updated>
+    </task>
+    <task id="LOCAL-00008" summary="📚 Adding MIT license file.">
+      <option name="closed" value="true" />
+      <created>1711231902068</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711231902068</updated>
+    </task>
+    <task id="LOCAL-00009" summary="⚡ Implementing first version of Logger.">
+      <option name="closed" value="true" />
+      <created>1711232365340</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711232365340</updated>
+    </task>
+    <task id="LOCAL-00010" summary="⚡ Implementing first version of Logger.">
+      <option name="closed" value="true" />
+      <created>1711232583303</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1711232583303</updated>
+    </task>
+    <task id="LOCAL-00011" summary="📚 Adding README file to guide user to use SL4J.">
+      <option name="closed" value="true" />
+      <created>1711233602182</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1711233602182</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value=" Starting Simple Log for Java." />
+    <MESSAGE value="⚡ Creating annotation classes for customize Logger." />
+    <MESSAGE value="⚡ Creating color constants and Log Level enum." />
+    <MESSAGE value=" Adding the README file for guide user to use SL4J." />
+    <MESSAGE value=" Adding MIT license file." />
+    <MESSAGE value="⚡ Implementing first version of Logger." />
+    <MESSAGE value=" Adding README file to guide user to use SL4J." />
+    <option name="LAST_COMMIT_MESSAGE" value=" Adding README file to guide user to use SL4J." />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+</project>

@@ -13,6 +13,8 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 
+import static org.sl4f.LogColor.*;
+
 /**
  * The Logger class provides a framework for logging messages with different levels of severity.
  * It supports logging to the console and optionally to files for critical errors.
@@ -36,7 +38,7 @@ import java.util.Date;
  * @version 1.0.0
  * @since 1.0.0
  */
-public abstract class Logger {
+public class Logger {
 
     /**
      * Indicates whether global debug mode is enabled.
@@ -123,7 +125,7 @@ public abstract class Logger {
 
         int currentSpacesLength = level.length();
 
-        String formattedName = " ".repeat(1 + (maxSpacesLength - currentSpacesLength)) + LogColor.BOLD + name + LogColor.RESET;
+        String formattedName = " ".repeat(1 + (maxSpacesLength - currentSpacesLength)) + BOLD + name + LogColor.RESET;
 
         return String.format("[%s] %s %s: %s", getFormattedTimestamp(), color + level + LogColor.RESET, formattedName, message);
     }
@@ -222,7 +224,7 @@ public abstract class Logger {
      * @param target the target object to log
      */
     protected final void critical(Object target) {
-        printMessage(LogLevel.CRITICAL, target.toString(), LogColor.COLOR_CRITICAL);
+        printMessage(LogLevel.CRITICAL, target.toString(), COLOR_CRITICAL);
         System.exit(-1);
     }
 
@@ -234,7 +236,7 @@ public abstract class Logger {
      * @param exitCode the exit code of critical call
      */
     protected final void critical(Object target, int exitCode) {
-        printMessage(LogLevel.CRITICAL, target.toString(), LogColor.COLOR_CRITICAL);
+        printMessage(LogLevel.CRITICAL, target.toString(), COLOR_CRITICAL);
         System.exit(exitCode);
     }
 
@@ -258,7 +260,7 @@ public abstract class Logger {
      * @param exception the RuntimeException object
      */
     protected final void critical(Object target, RuntimeException exception) {
-        printMessage(LogLevel.CRITICAL, target.toString(), LogColor.COLOR_CRITICAL);
+        printMessage(LogLevel.CRITICAL, target.toString(), COLOR_CRITICAL);
 
         if (this.generateCriticalFile && generateCriticalFiles) {
             generateCriticalFile(exception, target.toString());
@@ -274,7 +276,7 @@ public abstract class Logger {
      * @param exception the RuntimeException object
      */
     protected final void critical(Object target, RuntimeException exception, int code) {
-        printMessage(LogLevel.CRITICAL, target.toString(), LogColor.COLOR_CRITICAL);
+        printMessage(LogLevel.CRITICAL, target.toString(), COLOR_CRITICAL);
 
         if (this.generateCriticalFile && generateCriticalFiles) {
             generateCriticalFile(exception, target.toString(), code);
@@ -353,6 +355,7 @@ public abstract class Logger {
      */
     private void generateCriticalFile(RuntimeException exception, String message) {
         if (generateCriticalFile) {
+            System.out.println(COLOR_CRITICAL + "Critical file path: " + RESET + BOLD + System.getProperty("user.dir") + "/" + getFormattedTimestamp().replaceAll(" ", "_").replaceAll(":", "-") + ".log");
             try (PrintWriter writer = new PrintWriter(new FileWriter(getFormattedTimestamp().replaceAll(" ", "_").replaceAll(":", "-") + ".log"))) {
                 generateCriticalBaseFile(exception, message, writer);
             } catch (IOException e) {
@@ -376,6 +379,7 @@ public abstract class Logger {
      */
     private void generateCriticalFile(RuntimeException exception, String message, int code) {
         if (generateCriticalFile) {
+            System.out.println(COLOR_CRITICAL + "Critical file path: " + RESET + BOLD + System.getProperty("user.dir") + "/" + getFormattedTimestamp().replaceAll(" ", "_").replaceAll(":", "-") + ".log");
             try (PrintWriter writer = new PrintWriter(new FileWriter(getFormattedTimestamp().replaceAll(" ", "_").replaceAll(":", "-") + ".log"))) {
                 generateCriticalBaseFile(exception, message, writer);
                 writer.println("Application Exit Code: " + code);
