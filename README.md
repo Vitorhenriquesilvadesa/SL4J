@@ -46,6 +46,17 @@ public class MyCustomLogger extends Logger {
 Then, you can use your custom logger to log messages at different levels:
 
 ```java
+
+import org.sl4f.Logger;
+import org.sl4f.annotation.LogAlias;
+import org.sl4f.annotation.LogInfo;
+
+@LogAlias("MyLogger")
+@LogInfo(level = LogLevel.INFO)
+public class MyCustomLogger extends Logger {
+    // Your custom methods and logic here
+}
+
 MyCustomLogger logger = new MyCustomLogger();
 
 logger.info("This is an informational message.");
